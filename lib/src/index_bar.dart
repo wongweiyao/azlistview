@@ -590,10 +590,12 @@ class _BaseIndexBarState extends State<BaseIndexBar> {
         //_triggerDragEvent(IndexBarDragDetails.actionUp);
       },
       behavior: HitTestBehavior.translucent,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: children,
-      ),
+      child: FittedBox(
+        child:Column(
+          mainAxisSize: MainAxisSize.min,
+          children: children,
+        ),
+      )
     );
   }
 }
